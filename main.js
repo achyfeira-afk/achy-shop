@@ -1,7 +1,7 @@
+
 const productList = document.getElementById("productList");
 const searchInput = document.getElementById("searchInput");
 
-// ================= CATEGORY FIX (STABIL 100%) =================
 const path = window.location.pathname.toLowerCase();
 
 let category = "abaya";
@@ -13,16 +13,11 @@ else if (path.includes("jaket")) {
   category = "jaket";
 }
 
-// ================= RENDER SYSTEM =================
 function render(keyword = "") {
 
   const filtered = products.filter(p => {
-
     const matchCategory = p.category === category;
-
-    const matchSearch =
-      p.name.toLowerCase().includes(keyword.toLowerCase());
-
+    const matchSearch = p.name.toLowerCase().includes(keyword.toLowerCase());
     return matchCategory && matchSearch;
   });
 
@@ -38,10 +33,8 @@ function render(keyword = "") {
   `).join("");
 }
 
-// ================= INIT =================
 render();
 
-// ================= SEARCH GLOBAL =================
 if (searchInput) {
   searchInput.addEventListener("input", (e) => {
     render(e.target.value);
