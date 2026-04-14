@@ -1,12 +1,10 @@
-
-// ================= ELEMENT =================
 const productList = document.getElementById("productList");
 const searchInput = document.getElementById("searchInput");
 
-// ================= CATEGORY DETECTION (FIX FINAL STABLE) =================
+// ================= CATEGORY FIX (STABIL 100%) =================
 const path = window.location.pathname.toLowerCase();
 
-let category = "";
+let category = "abaya";
 
 if (path.includes("fashion")) {
   category = "fashion";
@@ -14,20 +12,21 @@ if (path.includes("fashion")) {
 else if (path.includes("jaket")) {
   category = "jaket";
 }
-else {
-  category = "abaya";
-}
 
-// ================= RENDER FUNCTION =================
-function render(filterText = "") {
+// ================= RENDER SYSTEM =================
+function render(keyword = "") {
 
-  const filteredProducts = products.filter(p => {
+  const filtered = products.filter(p => {
+
     const matchCategory = p.category === category;
-    const matchSearch = p.name.toLowerCase().includes(filterText.toLowerCase());
+
+    const matchSearch =
+      p.name.toLowerCase().includes(keyword.toLowerCase());
+
     return matchCategory && matchSearch;
   });
 
-  productList.innerHTML = filteredProducts.map(p => `
+  productList.innerHTML = filtered.map(p => `
     <div class="card">
       <img src="${p.image}" alt="${p.name}">
       <div class="card-content">
@@ -39,10 +38,10 @@ function render(filterText = "") {
   `).join("");
 }
 
-// ================= INITIAL LOAD =================
+// ================= INIT =================
 render();
 
-// ================= SEARCH EVENT =================
+// ================= SEARCH GLOBAL =================
 if (searchInput) {
   searchInput.addEventListener("input", (e) => {
     render(e.target.value);
