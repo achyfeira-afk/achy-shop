@@ -1,3 +1,4 @@
+
 /* ================= BASE ================= */
 body {
   margin: 0;
@@ -54,49 +55,47 @@ body {
   padding: 12px;
 }
 
-/* ================= GRID ================= */
+/* ================= GRID (JANGAN DIUBAH) ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
 }
 
-/* ================= CARD (STABIL FIX) ================= */
+/* ================= CARD (RETURN NORMAL STABLE) ================= */
 .card {
   display: flex;
   flex-direction: column;
   background: #fff;
   border-radius: 15px;
-  overflow: hidden;
-  height: 330px;
+  padding: 8px;
+  height: auto; /* 🔥 DIKEMBALIKAN NORMAL */
 }
 
-/* ================= IMAGE (NO POTONG KEPALA BERLEBIH) ================= */
+/* ================= IMAGE (NORMAL, NO KUNCI HEIGHT BERLEBIH) ================= */
 .card img {
   width: 100%;
-  height: 170px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  display: block;
+  border-radius: 10px;
 }
 
 /* ================= CONTENT ================= */
 .card-content {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 8px;
 }
 
 /* ================= TITLE ================= */
 .card h3 {
   font-size: 13px;
-  margin: 4px 0;
+  margin: 6px 0;
   line-height: 1.2;
-  height: 34px;
-  overflow: hidden;
+
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ================= PRICE ================= */
@@ -107,21 +106,21 @@ body {
   margin: 4px 0;
 }
 
-/* ================= BUTTON (SELALU DI BAWAH) ================= */
+/* ================= BUTTON ================= */
 .btn-shopee {
-  margin-top: auto;
+  margin-top: 8px;
   display: block;
   text-align: center;
   background: #ee4d2d;
   color: #fff;
-  padding: 8px;
+  padding: 7px;
   border-radius: 15px;
   font-size: 11px;
   font-weight: bold;
   text-decoration: none;
 }
 
-/* ================= WA FLOAT ================= */
+/* ================= WA ================= */
 .wa-float {
   position: fixed;
   right: 15px;
@@ -139,7 +138,7 @@ body {
   width: 60%;
 }
 
-/* ================= MOBILE FIX (2 KOLOM ONLY ABAYA FIX GLOBAL) ================= */
+/* ================= MOBILE (ONLY FIX ABAYA SPACING) ================= */
 @media (max-width: 768px) {
 
   .grid {
@@ -153,11 +152,8 @@ body {
     padding: 10px;
   }
 
-  .card {
-    height: 300px;
-  }
-
+  /* 🔥 FIX ABAYA SPACING ISSUE */
   .card img {
-    height: 150px;
+    aspect-ratio: 1 / 1;
   }
 }
