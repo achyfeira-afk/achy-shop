@@ -1,38 +1,50 @@
-// ================= DATA PRODUK =================
+
+// ================= ELEMENT =================
 const productList = document.getElementById("productList");
+const searchInput = document.getElementById("searchInput");
 
-// ambil URL halaman (lebih stabil dari pathname)
-const page = window.location.href;
+// ================= CATEGORY DETECTION (FIX FINAL STABLE) =================
+const path = window.location.pathname.toLowerCase();
 
-// tentukan kategori
 let category = "";
 
-// ABAYA (index atau abaya page)
-if (page.includes("index.html") || page.endsWith("/") || page.includes("abaya")) {
+if (path.includes("fashion")) {
+  category = "fashion";
+}
+else if (path.includes("jaket")) {
+  category = "jaket";
+}
+else {
   category = "abaya";
 }
 
-// FASHION
-else if (page.includes("fashion")) {
-  category = "fashion";
-}
+// ================= RENDER FUNCTION =================
+function render(filterText = "") {
 
-// JAKET
-else if (page.includes("jaket")) {
-  category = "jaket";
-}
+  const filteredProducts = products.filter(p => {
+    const matchCategory = p.category === category;
+    const matchSearch = p.name.toLowerCase().includes(filterText.toLowerCase());
+    return matchCategory && matchSearch;
+  });
 
-// filter produk
-const filteredProducts = products.filter(p => p.category === category);
-
-// render
-productList.innerHTML = filteredProducts.map(p => `
-  <div class="card">
-    <img src="${p.image}" alt="${p.name}">
-    <div class="card-content">
-      <h3>${p.name}</h3>
-      <p>${p.price}</p>
-      <a class="btn-shopee" href="${p.link}" target="_blank">Beli Sekarang</a>
+  productList.innerHTML = filteredProducts.map(p => `
+    <div class="card">
+      <img src="${p.image}" alt="${p.name}">
+      <div class="card-content">
+        <h3>${p.name}</h3>
+        <p>${p.price}</p>
+        <a class="btn-shopee" href="${p.link}" target="_blank">Beli Sekarang</a>
+      </div>
     </div>
-  </div>
-`).join("");
+  `).join("");
+}
+
+// ================= INITIAL LOAD =================
+render();
+
+// ================= SEARCH EVENT =================
+if (searchInput) {
+  searchInput.addEventListener("input", (e) => {
+    render(e.target.value);
+  });
+}
