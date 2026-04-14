@@ -146,14 +146,17 @@ body {
 }
 
 /* ================= MOBILE ================= */
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
   .grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
-}
+
   .nav-box {
     position: static;
     justify-content: center;
     padding: 10px;
   }
+
 }
