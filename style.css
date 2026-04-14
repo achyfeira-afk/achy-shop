@@ -1,4 +1,3 @@
-
 /* ================= BASE ================= */
 body {
   margin: 0;
@@ -13,11 +12,6 @@ body {
 }
 
 /* ================= BANNER ================= */
-.banner {
-  width: 100%;
-  background: #000;
-}
-
 .banner img {
   width: 100%;
   display: block;
@@ -31,6 +25,7 @@ body {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .nav-box input {
@@ -59,29 +54,28 @@ body {
   padding: 12px;
 }
 
-/* ================= GRID (PC DEFAULT 5 KOLOM) ================= */
+/* ================= GRID ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
 }
 
-/* ================= CARD ================= */
+/* ================= CARD (STABIL FIX) ================= */
 .card {
   display: flex;
   flex-direction: column;
   background: #fff;
   border-radius: 15px;
-  padding: 8px;
-  height: 320px;
+  overflow: hidden;
+  height: 330px;
 }
 
-/* ================= GAMBAR ================= */
+/* ================= IMAGE (NO POTONG KEPALA BERLEBIH) ================= */
 .card img {
   width: 100%;
-  height: 180px;
+  height: 170px;
   object-fit: cover;
-  border-radius: 10px;
   display: block;
 }
 
@@ -90,39 +84,37 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding: 8px;
 }
 
-/* ================= JUDUL ================= */
+/* ================= TITLE ================= */
 .card h3 {
   font-size: 13px;
-  margin: 6px 0;
+  margin: 4px 0;
   line-height: 1.2;
-
+  height: 34px;
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  height: 34px;
 }
 
-/* ================= HARGA ================= */
+/* ================= PRICE ================= */
 .card p {
   font-size: 13px;
   font-weight: bold;
   color: #e91e63;
   margin: 4px 0;
-  height: 18px;
 }
 
-/* ================= BUTTON ================= */
+/* ================= BUTTON (SELALU DI BAWAH) ================= */
 .btn-shopee {
   margin-top: auto;
   display: block;
   text-align: center;
   background: #ee4d2d;
   color: #fff;
-  padding: 7px;
+  padding: 8px;
   border-radius: 15px;
   font-size: 11px;
   font-weight: bold;
@@ -147,7 +139,7 @@ body {
   width: 60%;
 }
 
-/* ================= MOBILE (2 KOLOM SAJA) ================= */
+/* ================= MOBILE FIX (2 KOLOM ONLY ABAYA FIX GLOBAL) ================= */
 @media (max-width: 768px) {
 
   .grid {
@@ -161,12 +153,11 @@ body {
     padding: 10px;
   }
 
-  .card img {
-    height: 150px;
+  .card {
+    height: 300px;
   }
 
-  .card h3 {
-    font-size: 12px;
-    height: 36px;
+  .card img {
+    height: 150px;
   }
 }
