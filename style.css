@@ -75,19 +75,23 @@ body {
   padding: 8px;
 }
 
+/* ================= GAMBAR (FIX STABIL SEMUA SOURCE) ================= */
 .card img {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 180px;         /* FIX: stabil untuk semua gambar */
   object-fit: cover;
   border-radius: 10px;
+  display: block;
 }
 
+/* ================= CONTENT ================= */
 .card-content {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
+/* ================= JUDUL ================= */
 .card h3 {
   font-size: 13px;
   margin: 6px 0;
@@ -98,9 +102,10 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  height: 32px;
+  height: 34px;
 }
 
+/* ================= HARGA ================= */
 .card p {
   font-size: 13px;
   font-weight: bold;
@@ -109,6 +114,7 @@ body {
   height: 18px;
 }
 
+/* ================= BUTTON ================= */
 .btn-shopee {
   margin-top: auto;
   display: block;
@@ -122,7 +128,7 @@ body {
   text-decoration: none;
 }
 
-/* ================= WA ================= */
+/* ================= WA FLOAT ================= */
 .wa-float {
   position: fixed;
   right: 15px;
@@ -142,6 +148,7 @@ body {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
   .grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
@@ -152,24 +159,15 @@ body {
     justify-content: center;
     padding: 10px;
   }
-}
 
-/* ================= DESKTOP FIX (FOCUS UTAMA) ================= */
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(5, 1fr);
+  /* FIX FINAL: stabil HP (INI YANG MENYELESAIKAN ABAYA) */
+  .card img {
+    height: 150px;
   }
 
-  .card {
-    height: 100%;
-    display: flex;
+  .card h3 {
+    font-size: 12px;
+    height: 36px;
   }
 
-  .card-content {
-    flex: 1;
-  }
-
-  .btn-shopee {
-    margin-top: auto;
-  }
 }
