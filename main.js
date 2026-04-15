@@ -1,54 +1,62 @@
-const productList = document.getElementById("productList");
-const searchInput = document.getElementById("searchInput");
+document.addEventListener("DOMContentLoaded", function () {
 
-// DETEKSI HALAMAN
-const page = window.location.href;
+  const productList = document.getElementById("productList");
+  const searchInput = document.getElementById("searchInput");
 
-let category = "";
+  // CEK ELEMENT (biar tidak error)
+  if (!productList || !searchInput) return;
 
-if (page.includes("abaya") || page.includes("index")) {
-  category = "abaya";
-} else if (page.includes("fashion")) {
-  category = "fashion";
-} else if (page.includes("jaket")) {
-  category = "jaket";
-}
+  // DETEKSI HALAMAN
+  const page = window.location.href.toLowerCase();
 
-// RENDER
-function renderProducts(list) {
-  productList.innerHTML = list.map(p => `
-    <div class="card">
-      <img src="${p.image}" alt="${p.name}">
-      <div class="card-content">
-        <h3>${p.name}</h3>
-        <p>${p.price}</p>
-        <a class="btn-shopee" href="${p.link}" target="_blank">Beli Sekarang</a>
-      </div>
-    </div>
-  `).join("");
-}
+  let category = "abaya"; // default aman
 
-// FILTER (INI KUNCI FIX)
-function filterProducts() {
-  const keyword = searchInput.value.toLowerCase();
-
-  let result;
-
-  if (keyword === "") {
-    // ✅ NORMAL (tidak search → per kategori)
-    result = products.filter(p => p.category === category);
-  } else {
-    // ✅ SEARCH (lintas kategori)
-    result = products.filter(p =>
-      p.name.toLowerCase().includes(keyword)
-    );
+  if (page.includes("fashion")) {
+    category = "fashion";
+  } else if (page.includes("jaket")) {
+    category = "jaket";
   }
 
-  renderProducts(result);
-}
+  // RENDER PRODUK
+  function renderProducts(list) {
+    if (!list || list.length === 0) {
+      productList.innerHTML = "<p>Produk tidak ditemukan</p>";
+      return;
+    }
 
-// LOAD AWAL
-filterProducts();
+    productList.innerHTML = list.map(p => `
+      <div class="card">
+        <img src="${p.image}" alt="${p.name}">
+        <div class="card-content">
+          <h3>${p.name}</h3>
+          <p>${p.price}</p>
+          <a class="btn-shopee" href="${p.link}" target="_blank">Beli Sekarang</a>
+        </div>
+      </div>
+    `).join("");
+  }
 
-// EVENT
-searchInput.addEventListener("keyup", filterProducts);
+  // FILTER PRODUK
+  function filterProducts() {
+    const keyword = searchInput.value.toLowerCase();
+
+    let result;
+
+    if (keyword === "") {
+      result = products.filter(p => p.category === category);
+    } else {
+      result = products.filter(p =>
+        p.name.toLowerCase().includes(keyword)
+      );
+    }
+
+    renderProducts(result);
+  }
+
+  // LOAD AWAL (WAJIB BIAR LANGSUNG MUNCUL)
+  filterProducts();
+
+  // EVENT SEARCH
+  searchInput.addEventListener("keyup", filterProducts);
+
+});
