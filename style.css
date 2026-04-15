@@ -155,22 +155,23 @@ body {
   .nav-box {
     position: static;
     display: flex;
-    flex-wrap: nowrap; /* PENTING: biar tidak turun */
-    justify-content: space-between;
     align-items: center;
     gap: 6px;
     padding: 10px;
-    overflow-x: auto; /* kalau kepanjangan bisa geser */
+
+    flex-wrap: nowrap;      /* kunci agar tidak turun */
+    overflow-x: auto;       /* bisa geser */
   }
 
   .nav-box input {
-    flex: 1;
-    min-width: 90px;
+    flex: 0 0 110px;        /* jangan terlalu besar */
+    height: 32px;
   }
 
   .nav-box button {
-    flex: 1;
-    min-width: 70px;
+    flex: 0 0 auto;         /* ukuran stabil */
+    height: 32px;
+    padding: 0 10px;
     white-space: nowrap;
   }
 
