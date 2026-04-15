@@ -1,8 +1,20 @@
-// ================= SETUP =================
 const productList = document.getElementById("productList");
 const searchInput = document.getElementById("searchInput");
 
-// ================= RENDER =================
+// DETEKSI HALAMAN
+const page = window.location.href;
+
+let category = "";
+
+if (page.includes("abaya") || page.includes("index")) {
+  category = "abaya";
+} else if (page.includes("fashion")) {
+  category = "fashion";
+} else if (page.includes("jaket")) {
+  category = "jaket";
+}
+
+// RENDER
 function renderProducts(list) {
   productList.innerHTML = list.map(p => `
     <div class="card">
@@ -16,21 +28,27 @@ function renderProducts(list) {
   `).join("");
 }
 
-// ================= FILTER =================
+// FILTER (INI KUNCI FIX)
 function filterProducts() {
   const keyword = searchInput.value.toLowerCase();
 
-  const result = products.filter(p => {
-    // 🔥 LINTAS KATEGORI (INI KUNCINYA)
-    const matchSearch = p.name.toLowerCase().includes(keyword);
-    return matchSearch;
-  });
+  let result;
+
+  if (keyword === "") {
+    // ✅ NORMAL (tidak search → per kategori)
+    result = products.filter(p => p.category === category);
+  } else {
+    // ✅ SEARCH (lintas kategori)
+    result = products.filter(p =>
+      p.name.toLowerCase().includes(keyword)
+    );
+  }
 
   renderProducts(result);
 }
 
-// ================= LOAD AWAL =================
-renderProducts(products);
+// LOAD AWAL
+filterProducts();
 
-// ================= EVENT SEARCH =================
+// EVENT
 searchInput.addEventListener("keyup", filterProducts);
