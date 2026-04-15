@@ -146,7 +146,6 @@ body {
 }
 
 /* ================= MOBILE ================= */
-/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   .grid {
@@ -155,8 +154,24 @@ body {
 
   .nav-box {
     position: static;
-    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap; /* PENTING: biar tidak turun */
+    justify-content: space-between;
+    align-items: center;
+    gap: 6px;
     padding: 10px;
+    overflow-x: auto; /* kalau kepanjangan bisa geser */
+  }
+
+  .nav-box input {
+    flex: 1;
+    min-width: 90px;
+  }
+
+  .nav-box button {
+    flex: 1;
+    min-width: 70px;
+    white-space: nowrap;
   }
 
 }
