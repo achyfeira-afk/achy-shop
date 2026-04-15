@@ -5,7 +5,7 @@ const products = [
     category: "abaya",
     name: "Yasmen abaya dress bahan marbela anti uv aplikasi payet mutiara abaya umroh anti uv simple",
     price: "Rp126.000",
-    link: "https://s.shopee.co.id/gM5YnDhJI",
+    link: "https://i.imgur.com/H3EQi82.jpeg",
     image: "https://down-tx-id.img.susercontent.com/id-11134207-82252-mg2bt9um7958b2.webp"
   },
  {
