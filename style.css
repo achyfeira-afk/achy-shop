@@ -1,6 +1,12 @@
-/* ================= BASE ================= */
-body {
+/* ================= GLOBAL FIX ================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🔥 cegah halaman melebar */
   font-family: Arial, sans-serif;
   background: #f5f5f5;
 }
@@ -9,6 +15,7 @@ body {
 .header {
   position: relative;
   width: 100%;
+  max-width: 100%;
 }
 
 /* ================= BANNER ================= */
@@ -22,14 +29,17 @@ body {
   display: block;
 }
 
-/* ================= NAV ================= */
+/* ================= NAV (FIX TOTAL) ================= */
 .nav-box {
   position: absolute;
-  right: 15px;
+  left: 15px;   /* 🔥 kunci kiri */
+  right: 15px;  /* 🔥 kunci kanan */
   bottom: 15px;
+
   display: flex;
+  align-items: center;
   gap: 8px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* desktop boleh wrap */
 }
 
 .nav-box input {
@@ -46,6 +56,7 @@ body {
   border-radius: 20px;
   font-size: 12px;
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .nav-box button.active {
@@ -56,6 +67,7 @@ body {
 /* ================= CONTAINER ================= */
 .container {
   padding: 12px;
+  max-width: 100%;
 }
 
 /* ================= GRID ================= */
@@ -65,7 +77,7 @@ body {
   gap: 15px;
 }
 
-/* ================= CARD (KUNCI UTAMA) ================= */
+/* ================= CARD ================= */
 .card {
   display: flex;
   flex-direction: column;
@@ -75,7 +87,6 @@ body {
   padding: 8px;
 }
 
-/* GAMBAR */
 .card img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -83,14 +94,12 @@ body {
   border-radius: 10px;
 }
 
-/* WRAPPER ISI */
 .card-content {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-/* JUDUL (DIKUNCI) */
 .card h3 {
   font-size: 13px;
   margin: 6px 0;
@@ -101,21 +110,19 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 
-  height: 32px; /* KUNCI */
+  height: 32px;
 }
 
-/* HARGA (DIKUNCI) */
 .card p {
   font-size: 13px;
   font-weight: bold;
   color: #e91e63;
   margin: 4px 0;
-  height: 18px; /* KUNCI */
+  height: 18px;
 }
 
-/* TOMBOL (DIKUNCI PALING PENTING) */
 .btn-shopee {
-  margin-top: auto; /* KUNCI UTAMA */
+  margin-top: auto;
   display: block;
   text-align: center;
   background: #ee4d2d;
@@ -149,7 +156,7 @@ body {
 @media (max-width: 768px) {
 
   .grid {
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .nav-box {
@@ -159,20 +166,20 @@ body {
     gap: 6px;
     padding: 10px;
 
-    flex-wrap: nowrap;      /* kunci agar tidak turun */
-    overflow-x: auto;       /* bisa geser */
+    flex-wrap: nowrap;     /* 🔥 tidak turun */
+    overflow-x: auto;      /* 🔥 bisa geser */
   }
 
   .nav-box input {
-    flex: 0 0 110px;        /* jangan terlalu besar */
+    flex: 0 0 110px;
     height: 32px;
   }
 
   .nav-box button {
-    flex: 0 0 auto;         /* ukuran stabil */
+    flex: 0 0 auto;
     height: 32px;
     padding: 0 10px;
-    white-space: nowrap;
+    font-size: 11px;
   }
 
 }
