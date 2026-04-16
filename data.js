@@ -303,13 +303,13 @@ const products = [
     link: "https://s.shopee.co.id/16QKGtnfC",
     image: "https://down-tx-id.img.susercontent.com/id-11134207-8224w-mkklmwqfrb464a.webp"
   },
-  {
-    category: "jaket",
-    name: "Dzakileather- Jaket Crop Wanita Saku Kancing Depan Tidak Berban Bawah",
-    price: "Rp153.190",
-    link: "https://s.shopee.co.id/8ASBMYPDpR"
-    image: "https://down-bs-id.img.susercontent.com/id-11134207-7r98p-lunnydeb9k0t7e.webp",
-  },
+{
+  category: "jaket",
+  name: "Dzakileather- Jaket Crop Wanita Saku Kancing Depan Tidak Berban Bawah",
+  price: "Rp153.190",
+  link: "https://s.shopee.co.id/8ASBMYPDpR",
+  image: "https://down-bs-id.img.susercontent.com/id-11134207-7r98p-lunnydeb9k0t7e.webp",
+},
  {
     category: "jaket",
     name: "Jaket Sweater Wanita Jaket Cewe Fleece Outerwear",
