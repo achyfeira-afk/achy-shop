@@ -303,5 +303,116 @@ const products = [
     link: "https://s.shopee.co.id/16QKGtnfC",
     image: "https://down-tx-id.img.susercontent.com/id-11134207-8224w-mkklmwqfrb464a.webp"
   },
-
+  {
+    category: "jaket",
+    name: "Dzakileather- Jaket Crop Wanita Saku Kancing Depan Tidak Berban Bawah",
+    price: "Rp153.190",
+    link: "https://s.shopee.co.id/8ASBMYPDpR"
+    image: "https://down-bs-id.img.susercontent.com/id-11134207-7r98p-lunnydeb9k0t7e.webp",
+  },
+ {
+    category: "jaket",
+    name: "Jaket Sweater Wanita Jaket Cewe Fleece Outerwear",
+    price: "Rp72.000",
+    link: "https://s.shopee.co.id/LjK0tBpAm",
+    image: "https://down-bs-id.img.susercontent.com/id-11134207-7rbk6-m698rn3y3kr76d.webp"
+  },
+ {
+    category: "jaket",
+    name: "Wispie Level Top | Atasan Jaket Fleece Wanita Zipper Maroon Burgundy",
+    price: "Rp172.900",
+    link: "https://s.shopee.co.id/9ztppETSCH",
+    image: "https://down-ws-id.img.susercontent.com/id-11134207-81ztm-mer1dhy31h51bd.webp"
+  },
+ {
+    category: "jaket",
+    name: "Jaket Crop Wanita / Jaket Wanita Crop Top / Jaket Wanita Kekinian / Jaket Wanita Simple / Jaket Wanita Korea / Jaket Crop / Jaket Formal Wanita",
+    price: "Rp155.200",
+    link: "https://s.shopee.co.id/4Aw3AJ7esF",
+    image: "https://down-ws-id.img.susercontent.com/id-11134207-7r98p-lydqv2ychzjccd.webp"
+  },
+ {
+    category: "jaket",
+    name: "Jaket jeans Wanita Hoodie sleting zipper Ld 114 Resleting kekinian",
+    price: "Rp66.750",
+    link: "https://s.shopee.co.id/BPuP3IXMj",
+    image: "https://down-ws-id.img.susercontent.com/id-11134207-7rasg-m5l1qovro5tu29.webp"
+  },
+ {
+    category: "jaket",
+    name: "JAKET BOMBER VELTICS SERIES PREMIUM JAKET MOTOR KEREN WATERPROOF ANTI ANGIN",
+    price: "Rp128.000",
+    link: "https://s.shopee.co.id/2LUOzIYgzh",
+    image: "https://down-aka-id.img.susercontent.com/id-11134207-822wq-mlqm1myeozk04f.webp"
+  },
+ {
+    category: "jaket",
+    name: "Jaket GO JEK Terbaru G0 T0 Waterproof / Jaket Ojol Best Seller / Jaket Motor Tidak Gerah Nyaman DIgunakan",
+    price: "Rp72.000",
+    link: "https://s.shopee.co.id/7AZelIck33",
+    image: "https://down-aka-id.img.susercontent.com/id-11134207-7rbk9-m6wqbfpw0ah5f6.webp"
+  },
+ {
+    category: "jaket",
+    name: "Owngrace Jaket Olahraga Anti Uv Wanita Polos Lengan Panjang Untuk Yoga/Gym/Fitness Sport/zumba",
+    price: "Rp93.899",
+    link: "https://s.shopee.co.id/6Ah7ZnabqO",
+    image: "https://down-aka-id.img.susercontent.com/id-11134207-7ra0g-mdpx5o5fgd58f1.webp"
+  },
+ {
+    category: "jaket",
+    name: "JAKET JEANS CEWEK MURAH JUMBO OVER SIZE M - XXXL LD 120cm MUAT 95KG JAKET JEANS WANITA JAKET Nanstore09",
+    price: "Rp108.300",
+    link: "https://s.shopee.co.id/6Ah7akqASH",
+    image: "https://down-tx-id.img.susercontent.com/id-11134207-7rbk2-macdowjqvkrgfd.webp"
+  },
+ {
+    category: "jaket",
+    name: "BLUERED Jaket Parasut wanita/navy/Bolak Balik/FashionJaket Motor/OOTD",
+    price: "Rp108.300",
+    link: "https://s.shopee.co.id/7AZemslU0X",
+    image: "https://down-tx-id.img.susercontent.com/id-11134207-82252-mjc0pgyfu8zm97.webp"
+  },
+ {
+    category: "jaket",
+    name: "Hoodie Zipper Jumbo Polos Pria Wanita L XL XXL XXXL XXXXL XXXXXL",
+    price: "Rp59.669",
+    link: "https://s.shopee.co.id/30k5qXd1NB",
+    image: "https://down-bs-id.img.susercontent.com/id-11134207-7r98z-lu7zpw7w07o27c.webp"
+  },
+{
+    category: "jaket",
+    name: "MIGHTYANYWHERE- Jaket Olahraga Parasut Polos Pria/Wanita Sauna Suit, Jogging, Lari, Bersepeda, Despo, Gym Fitnes, Senam, Yoga, Running",
+    price: "Rp73.115",
+    link: "https://s.shopee.co.id/7VCVDNAuiy",
+    image: "https://down-bs-id.img.susercontent.com/id-11134207-7rbk8-ma0rg3y3iinh30.webp"
+  },
+{
+    category: "jaket",
+    name: "ZAHIRA LONG OUTER PREMIUM BY ALIETHA JACKET WANITA MUSLIMAH KEKINIAN",
+    price: "Rp177.209",
+    link: "https://s.shopee.co.id/3B3W5hB1Sw",
+    image: "https://down-bs-id.img.susercontent.com/id-11134207-7rbk6-mb37350cu2am0d.webp"
+  },
+{
+    category: "jaket",
+    name: "JAKET POLAN-Polan Jaket Fashion Korean/Jaket wanita kekinian",
+    price: "Rp57.900",
+    link: "https://s.shopee.co.id/16ULm4DTB",
+    image: "https://down-aka-id.img.susercontent.com/2e2ea33cf4a9543273803a1b5953b639.webp"
+  },
+{
+    category: "jaket",
+    name: "JAKET LUCU WANITA KOREA - COOKIE BEAR BUTTON - JACKET HOODIE TEBAL",
+    price: "Rp56.850",
+    link: "https://s.shopee.co.id/8ASC559zRT",
+    image: "https://down-bs-id.img.susercontent.com/id-11134207-7rasm-m1w9gqpmkeovd8.webp"
+  },
+{
+    category: "jaket",
+    name: "JAYA.Co Jaket Bomber Hoodie Basic SINTIA",
+    price: "Rp34.555",
+    link: "https://s.shopee.co.id/5VRR2hOEOE",
+    image: "https://down-bs-id.img.susercontent.com/24a8500c170543e125baaf16e0773a20.webp"
+  },
 ];
